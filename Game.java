@@ -6,7 +6,7 @@ public class Game {
     // special class for getting user input
     GameHelper helper = new GameHelper();
 
-    SimpleDotCom theDotCom = new SimpleDotCom();
+    DotCom theDotCom = new DotCom();
 
     // make a random variable and fill locations array
     int randomNum = (int) (Math.random() * 5);
