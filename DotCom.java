@@ -1,4 +1,4 @@
-public class SimpleDotCom {
+public class DotCom {
   int[] locationCells;
   int numOfHits = 0;
 
