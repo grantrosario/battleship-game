@@ -65,8 +65,8 @@ public class Game {
       System.out.println("It only took you " + numOfGuesses + " guesses.");
       System.out.println("You got out before your options sank.");
     } else {
-      System.out.println("Took you long enough. " + numOfGuesses + " guesses.")
-      System.out.println("Fish are dancing with your options.")
+      System.out.println("Took you long enough. " + numOfGuesses + " guesses.");
+      System.out.println("Fish are dancing with your options.");
     }
   }
 

@@ -25,7 +25,7 @@ public class Ship {
 
       if (locationCells.isEmpty()) {
         result = "kill";
-        System.out.println("You sunk the " + name + "!")
+        System.out.println("You sunk the " + name + "!");
       } else {
         result = "hit";
       } // close if
