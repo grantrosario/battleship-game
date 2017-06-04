@@ -5,10 +5,6 @@ public class Ship {
   private ArrayList<String> locationCells;
   private String name;
 
-  public Ship(String thisName) {
-    name = thisName;
-  }
-
   public void setLocationCells(ArrayList<String> locs) {
     locationCells = locs;
   }

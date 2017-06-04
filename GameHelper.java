@@ -7,7 +7,7 @@ public class GameHelper {
   private int gridLength = 7;
   private int gridSize = 49;
   private int [] grid = new int[gridSize];
-  private int comCount = 0;
+  private int shipCount = 0;
 
   public String getUserInput(String prompt) {
     String inputLine = null;
@@ -22,18 +22,18 @@ public class GameHelper {
     return inputLine.toLowerCase();
   }
 
-  public ArrayList<String> placeDotCom(int comSize) {
+  public ArrayList<String> placeShip(int shipSize) {
     ArrayList<String> alphaCells = new ArrayList<String>();
-    String [] alphacoords = new String [comSize];
+    String [] alphacoords = new String [shipSize];
     String temp = null;
-    int [] coords = new int [comSize];
+    int [] coords = new int [shipSize];
     int attempts = 0;
     boolean success = false;
     int location = 0;
 
-    comCount++;
+    shipCount++;
     int incr = 1;
-    if ((comCount % 2 ) == 1) {
+    if ((shipCount % 2 ) == 1) {
       incr = gridLength;
     }
 
@@ -42,7 +42,7 @@ public class GameHelper {
       System.out.print("try " + location);
       int x = 0;
       success = true;
-      while (success && x < comSize) {
+      while (success && x < shipSize) {
         if (grid[location] == 0) {
           coords[x++] = location;
           location += incr;
@@ -63,7 +63,7 @@ public class GameHelper {
     int row = 0;
     int column = 0;
     System.out.print("\n");
-    while (x < comSize) {
+    while (x < shipSize) {
       grid[coords[x]] = 1;
       row = (int) (coords[x] / gridLength);
       column = coords[x] % gridLength;
