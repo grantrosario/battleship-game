@@ -1,11 +1,20 @@
 import java.util.ArrayList;
 
-public class DotCom {
+public class Ship {
 
   private ArrayList<String> locationCells;
+  private String name;
 
-    public void setLocationCells(ArrayList<String> locs) {
+  public Ship(String thisName) {
+    name = thisName;
+  }
+
+  public void setLocationCells(ArrayList<String> locs) {
     locationCells = locs;
+  }
+
+  public void setName(String thisName) {
+    name = thisName;
   }
 
   public String checkYourself(String userInput) {
@@ -16,6 +25,7 @@ public class DotCom {
 
       if (locationCells.isEmpty()) {
         result = "kill";
+        System.out.println("You sunk the " + name + "!")
       } else {
         result = "hit";
       } // close if
